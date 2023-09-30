@@ -1,0 +1,129 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+body {
+  background-color: rgb(166, 109, 3);
+}
+
+.wrapper {
+  display: none;
+  width: 80vmin;
+  padding: 50px 40px;
+  background-color: black;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 5px;
+  box-shadow: 20px 20px 40px rgba(97, 63, 0, 0.4);
+}
+span {
+  display: block;
+  width: 100%;
+  font-size: 100px;
+  text-align: center;
+
+}
+p{
+  font-size: 16px;
+  color: white;
+  font-weight: 400;
+  text-align: center;
+  word-wrap: break-word;
+  line-height: 35px;
+  margin: 30px, 0;
+  opacity: 0;
+}
+.fade {
+  opacity: 1;
+  transition: opacity 1.5s;
+}
+
+button {
+  display: block;
+  background-color: orange;
+  border: none;
+  padding: 5px;
+  color: black;
+  font-weight: 600;
+  padding: 12px 25px;
+  margin: 0 auto;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18%;
+  flex-direction: column;
+}
+.pro img{
+  width: 100%;
+  border-radius: 20px;
+  animation:  4s linear 0s infinite alternate rise,
+  4s linear 0s infinite alternate bounce;
+  
+}
+@keyframes rise {
+  from {
+    transform: translateY(110vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translateX(-50vw);
+  }
+  to {
+    transform: translateX(50vw);
+  }
+}
+h3 {
+  text-align: center;
+  margin-top: 30px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.pro2 img{
+  width: 40%;
+  border-radius: 20px;
+  margin-top: 30px;
+  margin-left: 100px;
+}
+
+.pro2 img::after {
+  animation: pulse 1000ms cubic-bezier(0.9, 0.7, 0.5, 0.9) infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.4;
+  }
+}
+
+.pro2 img::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: blueviolet;
+  border-radius: 50%;
+  z-index: -1;
+}
